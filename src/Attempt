@@ -1,0 +1,53 @@
+
+
+public class unit11final
+{
+
+
+public static void main(String[] args)
+{
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Number of employees: ");
+    int n = input.nextInt();
+      
+   
+        for (int i = 0; i < n; i++) {
+        System.out.println("Please enter the first name of employee: " );
+        if (input.hasNextLine()) 
+        {
+        String dummy = input.nextLine();
+        }
+        String firstname = input.nextLine();
+
+        System.out.println("Please enter the last name of employee: " );
+        String lastname = input.nextLine();
+
+        System.out.println("Please enter the street and house number of employee: " );
+        String street = input.nextLine();
+
+        System.out.println("Please enter the city of employee: " );
+        String city = input.nextLine();
+
+        System.out.println("Please enter the state of employee: " );
+        String state = input.nextLine();
+
+        System.out.println("Please enter the zip code of employee: " );
+        String zip = input.nextLine();
+
+        System.out.println("Please enter the month hired for employee: " );
+        int month = input.nextInt();
+
+        System.out.println("Please enter the day hired for employee: " );
+        int day = input.nextInt();
+
+        System.out.println("Please enter the year hired for employee: " );
+        int year = input.nextInt();
+
+        //i dont know how to display the info
+    }
+
+    
+}
+}
