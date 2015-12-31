@@ -1,23 +1,23 @@
 
-
-public class unit11final
+import java.util.Scanner;
+public class Attempt
 {
 
 
 public static void main(String[] args)
 {
-
+	int i = 0;
     Scanner input = new Scanner(System.in);
-
+    Employee[] employees ={};
     System.out.println("Number of employees: ");
     int n = input.nextInt();
       
    
-        for (int i = 0; i < n; i++) {
+        while (i < n) {
         System.out.println("Please enter the first name of employee: " );
         if (input.hasNextLine()) 
         {
-        String dummy = input.nextLine();
+        String dummy = input.nextLine(); //Purpose?
         }
         String firstname = input.nextLine();
 
@@ -44,10 +44,26 @@ public static void main(String[] args)
 
         System.out.println("Please enter the year hired for employee: " );
         int year = input.nextInt();
-
-        //i dont know how to display the info
+        
+        if(errorCheck(month, day, year, state, zip) ==1)
+        	System.out.println("Invalid data input. Please try again.");
+        else{
+        	employees[i] = new Employee(firstname, lastname, month, day, year, street, city, state, zip);
+        	i++;
+        }
+        
+        
     }
 
     
+}
+static int errorCheck(int inMonth, int inDay, int inYear,String inState, String inZip){
+	if(inMonth < 1 || inMonth > 12 || inYear < 1000 || 
+			inDay < 1 || inDay > 31 || 
+			((inMonth == 4 || inMonth == 6 || inMonth == 9 || inMonth == 11) && inDay > 30) 
+			|| (inMonth == 2 && inDay > 29) || inState.length() != 2 || inZip.length() != 5)
+			return 1;
+	
+	else return 0;
 }
 }

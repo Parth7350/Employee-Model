@@ -3,9 +3,9 @@ public class Address {
 	public String street;
 	public String city;
 	public String state;
-	public int zip;
+	public String zip;
 	
-	public Address (String inStreet, String inCity, String inState, int inZip){
+	public Address (String inStreet, String inCity, String inState, String inZip){
 		
 		inState.toUpperCase();
 		street = inStreet;
